@@ -1,0 +1,10 @@
+﻿@model SliderDeleteViewModel
+
+<img src="~/assets/images/@Model.ImgUrl" width="300px" height="400px" />
+<input type="hidden" asp-for="ImgUrl" value="@Model.ImgUrl" />
+
+<h4>@Model.Title</h4>
+<form method="post" asp-action="delete" asp-route-id="@Model.Id">
+    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+    <a asp-controller="Slider" asp-action="index">Cancel</a>
+</form>
