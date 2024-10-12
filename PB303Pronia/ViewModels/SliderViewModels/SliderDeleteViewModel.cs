@@ -3,7 +3,7 @@
     public class SliderDeleteViewModel
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string ImgUrl { get; set; }
+        public string Title { get; set; } = null!;
+        public string ImgUrl { get; set; } = null!;
     }
 }

@@ -1,7 +1,11 @@
-﻿namespace PB303Pronia.Helpers;
+﻿using CloudinaryDotNet;
+using System.Security.Principal;
+
+namespace PB303Pronia.Helpers;
 
 public static class FileService
 {
+
     public static bool CheckType(this IFormFile file, string type = "image")
     {
         return file.ContentType.Contains(type);
@@ -25,6 +29,7 @@ public static class FileService
 
         return filename;
     }
+    
 
     public static bool DeleteFile(this string fileName,string path)
     {

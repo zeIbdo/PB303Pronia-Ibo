@@ -93,12 +93,14 @@ public class HomeController : Controller
 
 
 
-  public async Task<IActionResult> Redirect()
+    public async Task<IActionResult> Redirect()
     {
 
-        var basketItems=await _layoutService.GetBasketAsync();
+        var basketItems = await _layoutService.GetBasketAsync();
 
         return PartialView("_BasketPartial", basketItems);
 
     }
+
+    
 }
